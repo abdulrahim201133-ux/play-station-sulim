@@ -2,3 +2,26 @@
 .music-toggle{background:transparent;border:1px solid #1b9fff66;color:#9edfff;padding:11px 13px;border-radius:3px;font-size:10px;letter-spacing:.3px;cursor:pointer;transition:.25s;white-space:nowrap}
 .music-toggle:hover,.music-toggle.is-playing{border-color:#25baff;color:#fff;box-shadow:0 0 18px #087dff35}
 @media(max-width:620px){.music-toggle{padding:9px 10px;margin-left:auto;margin-right:10px;font-size:9px}.header-call{margin-left:0}}
+/* PLAYSTATION 5 NEON BACKGROUND */
+body {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(0, 100, 255, 0.28), transparent 55%),
+    radial-gradient(circle at 10% 40%, rgba(0, 70, 180, 0.18), transparent 35%),
+    radial-gradient(circle at 90% 75%, rgba(0, 100, 255, 0.16), transparent 35%),
+    linear-gradient(145deg, #02040c, #07152e 50%, #02040c) !important;
+  background-attachment: fixed !important;
+}
+
+body::before {
+  content: "△       ○       ×       □";
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(45px, 10vw, 130px);
+  letter-spacing: 35px;
+  color: rgba(35, 130, 255, 0.055);
+  pointer-events: none;
+  z-index: -1;
+}
