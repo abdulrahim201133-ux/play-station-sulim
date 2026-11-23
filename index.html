@@ -1,195 +1,108 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Play Station Sulim — Аренда PS5</title>
-<meta name="description" content="Аренда PlayStation 5 у Сулима. Выбирай игры, бронируй даты и наслаждайся игрой!">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#070b14;color:#fff;font-family:Arial,sans-serif;overflow-x:hidden}
-:root{--blue:#168cff;--cyan:#00d5ff}
-header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #18304b;position:sticky;top:0;background:#070b14ed;z-index:5}
-.logo{font-size:21px;font-weight:900;color:#39baff;text-shadow:0 0 15px #168cff}
-header a{color:#fff;text-decoration:none;font-size:13px}
-.hero{text-align:center;padding:75px 20px 55px;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:320px;height:320px;background:#087dff;filter:blur(130px);opacity:.3;top:20px;left:50%;transform:translateX(-50%);animation:glow 4s infinite alternate}
-@keyframes glow{to{opacity:.65;transform:translateX(-50%) scale(1.3)}}
-.hero>*{position:relative}
-.tag{color:#40caff;letter-spacing:4px;font-size:12px}
-h1{font-size:clamp(30px,7vw,55px);margin:22px auto;max-width:850px;line-height:1.12}
-.hero p{color:#b8cce0;line-height:1.7;max-width:600px;margin:15px auto}
-.console{font-size:105px;margin:25px auto;text-shadow:0 0 25px #168cff;animation:float 3s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-13px)}}
-.btn{display:inline-block;background:linear-gradient(100deg,#087bff,#00cfff);color:#fff;text-decoration:none;padding:15px 25px;border-radius:12px;font-weight:bold;border:0;cursor:pointer;box-shadow:0 0 20px #087bff55;transition:.25s}
-.btn:hover{transform:translateY(-3px);box-shadow:0 0 30px #00bfff}
-section{padding:55px 6%;max-width:1150px;margin:auto}
-h2{text-align:center;font-size:29px;margin-bottom:28px}
-.sub{text-align:center;color:#9bb0c6;margin:-15px auto 30px;font-size:14px}
-.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:13px}
-.game{background:linear-gradient(145deg,#14243b,#0a101d);border:1px solid #1e3d60;border-radius:15px;padding:22px 10px;text-align:center;transition:.3s}
-.game:hover{transform:translateY(-6px) scale(1.025);border-color:#20aaff;box-shadow:0 0 22px #087bff44}
-.game .emoji{font-size:35px;margin-bottom:12px}
-.game strong{font-size:14px}
-.game small{display:block;color:#64caff;margin-top:8px}
-.soon{color:#ffca6b!important}
-.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
-.price{background:#101b2c;border:1px solid #21466c;border-radius:17px;padding:25px;text-align:center}
-.price h3{margin-bottom:12px}
-.amount{font-size:32px;color:#43c4ff;font-weight:bold;margin:12px}
-.price p{color:#a8bdd2;font-size:14px;line-height:1.7}
-.promo{background:linear-gradient(110deg,#073c75,#10264d);border:1px solid #168cff;border-radius:18px;padding:25px;text-align:center}
-.promo strong{font-size:23px;color:#6bd5ff}
-.booking{max-width:580px;margin:auto;background:#101b2c;border:1px solid #21466c;border-radius:18px;padding:22px}
-label{display:block;margin:15px 0 7px;color:#c5d9ee;font-size:14px}
-input,select{width:100%;padding:14px;border:1px solid #315273;background:#081321;color:white;border-radius:9px;font-size:16px}
-.total{margin:22px 0;text-align:center;background:#071321;padding:20px;border-radius:12px}
-.total strong{font-size:32px;color:#4ccaff}
-.note{font-size:12px;color:#9db0c3;line-height:1.6;margin-top:10px}
-.rules{color:#bdcfe0;line-height:2;font-size:14px}
-.contact{text-align:center;background:#0d1c30;border-radius:18px;padding:28px}
-.contact a{color:#4ccaff;font-size:22px;font-weight:bold;text-decoration:none}
-footer{text-align:center;color:#7890a8;padding:30px;font-size:12px}
-.reveal{animation:appear .9s ease both}
-@keyframes appear{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="Аренда PlayStation 5 от Play Station Sulim. PS5 и телевизор, доставка, любимые игры.">
+  <title>Play Station Sulim — аренда PS5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
- <div class="logo">PS SULIM 🎮</div>
- <a href="#booking">ЗАБРОНИРОВАТЬ ↓</a>
-</header>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Play Station Sulim — главная">
+      <span class="brand-mark">P<span>S</span></span>
+      <span class="brand-name">PLAY STATION <b>SULIM</b></span>
+    </a>
+    <nav class="nav"><a href="#games">Игры</a><a href="#prices">Цены</a><a href="#booking">Бронирование</a></nav>
+    <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">♫ <span id="musicLabel">Включить музыку</span></button>
+    <audio id="siteMusic" src="assets/background-music.mp3" preload="none" loop></audio>
+    <a class="header-call" href="tel:89380235066">Позвонить <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">☰</button>
+  </header>
 
-<main>
-<div class="hero">
- <div class="tag">PREMIUM GAMING RENTAL</div>
- <h1>НЕТУ ДЕНЕГ НА СВОЮ ПРИСТАВКУ, А ХОЧЕТСЯ ИГРАТЬ?</h1>
- <h2 style="font-size:23px;color:#46c4ff">СПЕШИМ ОБРАДОВАТЬ ВАС, ВЫ ТАМ, ГДЕ НАДО!</h2>
- <div class="console">🎮</div>
- <p>Арендуй Play Station у Сулима и наслаждайся любимыми играми!</p>
- <a class="btn" href="#booking">ЗАБРОНИРОВАТЬ PS5</a>
-</div>
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><i></i> АРЕНДА PLAYSTATION 5</div>
+        <h1>НЕТУ ДЕНЕГ НА СВОЮ ПРИСТАВКУ, А ХОЧЕТСЯ <em>ИГРАТЬ?</em></h1>
+        <h2>СПЕШИМ ОБРАДОВАТЬ ВАС, ВЫ ТАМ, ГДЕ НАДО!</h2>
+        <p class="hero-sub">Арендуй Play Station у Сулима и наслаждайся любимыми играми!</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#booking">Забронировать <span>→</span></a><a class="btn btn-ghost" href="#prices">Посмотреть цены</a></div>
+        <div class="hero-points"><span>✦ Без залога</span><span>✦ Доставка — 150 ₽</span><span>✦ От 700 ₽ в день</span></div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+        <div class="console-glow"></div>
+        <div class="console">
+          <div class="console-wing left-wing"></div><div class="console-core"></div><div class="console-wing right-wing"></div>
+          <div class="console-light"></div>
+        </div>
+        <div class="controller"><span></span><i></i><b>＋</b><small>×</small></div>
+        <div class="art-caption"><b>PLAY WITHOUT LIMITS</b><span>PS5 EXPERIENCE</span></div>
+      </div>
+      <div class="hero-bottom"><span>01 / PLAY</span><span>ТВОЙ ВЕЧЕР — ТВОИ ПРАВИЛА</span><span>SCROLL ↓</span></div>
+    </section>
 
-<section id="games">
- <h2>🎮 НАШИ ИГРЫ</h2>
- <p class="sub">Выбирай любимую игру и устраивай настоящий игровой вечер</p>
- <div class="games">
-  <div class="game"><div class="emoji">🚗</div><strong>GTA V</strong></div>
-  <div class="game"><div class="emoji">⚽</div><strong>FC 25</strong></div>
-  <div class="game"><div class="emoji">⚽</div><strong>FC 26</strong></div>
-  <div class="game"><div class="emoji">🥊</div><strong>UFC 4</strong></div>
-  <div class="game"><div class="emoji">🥊</div><strong>UFC 5</strong></div>
-  <div class="game"><div class="emoji">🐉</div><strong>Mortal Kombat</strong></div>
-  <div class="game"><div class="emoji">🤠</div><strong>Red Dead Redemption 2</strong></div>
-  <div class="game"><div class="emoji">🕷️</div><strong>Marvel's Spider-Man</strong></div>
-  <div class="game"><div class="emoji">🥊</div><strong>UFC 6</strong><small class="soon">Скоро</small></div>
-  <div class="game"><div class="emoji">🚘</div><strong>GTA VI</strong><small class="soon">Скоро</small></div>
- </div>
-</section>
+    <section class="section-wrap intro reveal">
+      <div class="section-kicker">01 — ПОЧЕМУ МЫ</div>
+      <div class="intro-grid"><h2>ТВОЯ ИГРА.<br><span>ТВОЙ ВЕЧЕР.</span></h2><p>Устрой домашний турнир, пройди любимую историю или просто отдохни с друзьями. Выбирай комплект, даты и игры — остальное обсудим при подтверждении заказа.</p></div>
+    </section>
 
-<section id="prices">
- <h2>💎 НАШИ ЦЕНЫ</h2>
- <div class="prices">
-  <div class="price"><h3>🎮 Только PS5</h3><div class="amount">700 ₽</div><p>За одни сутки аренды</p></div>
-  <div class="price"><h3>🎮 PS5 + TV</h3><div class="amount">1 000 ₽</div><p>За одни сутки аренды</p></div>
-  <div class="price"><h3>🚚 Доставка</h3><div class="amount">150 ₽</div><p>Стоимость доставки</p></div>
- </div>
- <div class="promo" style="margin-top:20px">
-  <strong>🔥 ТРЕТЬИ СУТКИ БЕСПЛАТНО!</strong>
-  <p style="margin-top:10px">При аренде от 1 800 ₽ за приставку и комплект. Доставка в сумму акции не входит.</p>
- </div>
-</section>
+    <section class="section-wrap" id="games">
+      <div class="section-head reveal"><div><div class="section-kicker">02 — GAME LIBRARY</div><h2>ВЫБИРАЙ <span>ИГРУ</span></h2></div><p>Подборка игр для ярких вечеров</p></div>
+      <div class="game-grid">
+        <article class="game-card game-gta reveal"><div class="game-number">01</div><div class="game-art"><span>GTA</span><b>V</b><small>LOS SANTOS</small></div><h3>GTA 5</h3><p>Открытый мир и большие приключения</p></article>
+        <article class="game-card game-fc reveal"><div class="game-number">02</div><div class="game-art"><span>FC</span><b>25</b><small>FOOTBALL CLUB</small></div><h3>FC 25</h3><p>Футбол для дружеских матчей</p></article>
+        <article class="game-card game-fc2 reveal"><div class="game-number">03</div><div class="game-art"><span>FC</span><b>26</b><small>FOOTBALL CLUB</small></div><h3>FC 26</h3><p>Новый сезон — новые матчи</p></article>
+        <article class="game-card game-ufc reveal"><div class="game-number">04</div><div class="game-art"><span>UFC</span><b>4</b><small>FIGHT NIGHT</small></div><h3>UFC 4</h3><p>Соревнование на двоих</p></article>
+        <article class="game-card game-ufc2 reveal"><div class="game-number">05</div><div class="game-art"><span>UFC</span><b>5</b><small>FIGHT NIGHT</small></div><h3>UFC 5</h3><p>Проверь свои навыки</p></article>
+        <article class="game-card game-mk reveal"><div class="game-number">06</div><div class="game-art"><span>MORTAL</span><b>KOMBAT</b><small>FIGHTING</small></div><h3>Mortal Kombat</h3><p>Классические поединки</p></article>
+        <article class="game-card game-rdr reveal"><div class="game-number">07</div><div class="game-art"><span>RED DEAD</span><b>REDEMPTION 2</b><small>WILD WEST</small></div><h3>Red Dead Redemption 2</h3><p>Большое приключение на Диком Западе</p></article>
+        <article class="game-card game-spider reveal"><div class="game-number">08</div><div class="game-art"><span>SPIDER</span><b>MAN</b><small>NEW YORK</small></div><h3>Marvel’s Spider-Man</h3><p>Город ждёт своего героя</p></article>
+        <article class="game-card game-soon reveal"><div class="game-number">09</div><div class="game-art"><span>UFC</span><b>6</b><small>COMING SOON</small></div><h3>UFC 6</h3><p>Скоро в коллекции</p><label>СКОРО</label></article>
+        <article class="game-card game-soon reveal"><div class="game-number">10</div><div class="game-art"><span>GTA</span><b>VI</b><small>COMING SOON</small></div><h3>GTA VI</h3><p>Скоро в коллекции</p><label>СКОРО</label></article>
+      </div>
+    </section>
 
-<section id="booking">
- <h2>📅 РАССЧИТАТЬ АРЕНДУ</h2>
- <p class="sub">Выбери комплект и продолжительность аренды</p>
- <div class="booking">
-  <label>Выбери комплект</label>
-  <select id="pack">
-   <option value="700">PS5 — 700 ₽/сутки</option>
-   <option value="1000">PS5 + TV — 1 000 ₽/сутки</option>
-  </select>
-  <label>Дата начала</label>
-  <input type="date" id="start">
-  <label>Количество суток</label>
-  <select id="days">
-   <option value="1">1 сутки</option>
-   <option value="2">2 суток</option>
-   <option value="3">3 суток</option>
-   <option value="4">4 суток</option>
-   <option value="5">5 суток</option>
-   <option value="6">6 суток</option>
-   <option value="7">7 суток</option>
-   <option value="10">10 суток</option>
-   <option value="14">14 суток</option>
-  </select>
-  <label>Доставка</label>
-  <select id="delivery">
-   <option value="0">Самовывоз — бесплатно</option>
-   <option value="150">Доставка — 150 ₽</option>
-  </select>
-  <div class="total">
-   <div style="color:#a8bdd2;margin-bottom:8px">Предварительная стоимость</div>
-   <strong id="total">700 ₽</strong>
-   <p class="note" id="details"></p>
-  </div>
-  <button class="btn" style="width:100%" onclick="bookingDemo()">ОСТАВИТЬ ЗАЯВКУ</button>
-  <p class="note">Это демонстрационная форма. Настоящее бронирование, проверка занятых дат и отправка заявок будут подключены после настройки базы данных.</p>
- </div>
-</section>
+    <section class="price-section" id="prices"><div class="section-wrap">
+      <div class="section-head reveal"><div><div class="section-kicker">03 — SIMPLE PRICING</div><h2>ПОНЯТНЫЕ <span>ЦЕНЫ</span></h2></div><p>Без залога. Доставка отдельно.</p></div>
+      <div class="price-grid">
+        <article class="price-card reveal"><div class="price-tag">01 / CONSOLE</div><h3>PS5</h3><div class="price">700 ₽<small>/ день</small></div><p>Приставка и всё необходимое для игры</p><a href="#booking">Выбрать комплект ↗</a></article>
+        <article class="price-card featured reveal"><div class="popular">ПОПУЛЯРНЫЙ ВАРИАНТ</div><div class="price-tag">02 / FULL SET</div><h3>PS5 + TV</h3><div class="price">1 000 ₽<small>/ день</small></div><p>Приставка вместе с телевизором</p><a href="#booking">Выбрать комплект ↗</a></article>
+        <article class="price-card reveal"><div class="price-tag">03 / DELIVERY</div><h3>Доставка</h3><div class="price">150 ₽<small>/ заказ</small></div><p>Стоимость доставки добавляется к аренде</p><a href="#booking">Рассчитать заказ ↗</a></article>
+      </div>
+      <div class="promo-strip reveal"><div class="promo-icon">3×</div><div><b>ТРЕТИЙ ДЕНЬ — БЕСПЛАТНО</b><p>При аренде от 1 800 ₽. Доставка в сумму акции не входит.</p></div><span>PLAY MORE</span></div>
+    </div></section>
 
-<section id="rules">
- <h2>📋 УСЛОВИЯ АРЕНДЫ</h2>
- <div class="rules">
-  • Оплата при получении или переводом.<br>
-  • Залог не требуется.<br>
-  • Доставка — 150 ₽.<br>
-  • Третьи сутки бесплатно при выполнении условий акции.<br>
-  • Дату аренды необходимо согласовать перед подтверждением заказа.
- </div>
-</section>
+    <section class="section-wrap booking-section" id="booking">
+      <div class="section-head reveal"><div><div class="section-kicker">04 — BOOK YOUR SESSION</div><h2>ЗАБРОНИРУЙ <span>PS5</span></h2></div><p>Оставь заявку — подтвердим даты и детали по телефону.</p></div>
+      <div class="booking-layout">
+        <form class="booking-form reveal" id="bookingForm">
+          <label>ТВОЙ НОМЕР ТЕЛЕФОНА<input id="phone" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" required></label>
+          <div class="form-row"><label>КОМПЛЕКТ<select id="package"><option value="ps5">PS5 — 700 ₽/день</option><option value="ps5_tv">PS5 + TV — 1 000 ₽/день</option></select></label><label>ДОСТАВКА<select id="delivery"><option value="no">Самовывоз</option><option value="yes">Нужна доставка +150 ₽</option></select></label></div>
+          <div class="form-row"><label>ДАТА НАЧАЛА<input id="startDate" type="date" required></label><label>КОЛИЧЕСТВО ДНЕЙ<input id="days" type="number" min="1" max="30" value="1" required></label></div>
+          <label>КОММЕНТАРИЙ (НЕОБЯЗАТЕЛЬНО)<textarea id="comment" rows="3" placeholder="Например, какие игры хотите"></textarea></label>
+          <div class="estimate"><span>Предварительная стоимость</span><strong id="total">700 ₽</strong><small id="discountNote">Выбери даты и комплект — сумма пересчитается автоматически.</small></div>
+          <button class="btn btn-primary submit-btn" type="submit">Отправить заявку <span>→</span></button>
+          <p class="form-note">Отправка откроет SMS с деталями заявки на номер владельца. Бронирование считается подтверждённым только после ответа.</p>
+          <div class="form-status" id="formStatus" role="status"></div>
+        </form>
+        <aside class="booking-aside reveal"><div class="aside-glow"></div><div class="aside-label">PLAY STATION SULIM</div><h3>ГОТОВ<br>К ИГРЕ?</h3><p>Есть вопросы по аренде или хочешь уточнить свободные даты?</p><a class="phone-link" href="tel:89380235066">8 938 023-50-66 ↗</a><div class="aside-bottom">БЕЗ ЗАЛОГА <span>•</span> PS5 RENTAL</div></aside>
+      </div>
+    </section>
 
-<section>
- <div class="contact">
-  <h2>📞 СВЯЗАТЬСЯ С НАМИ</h2>
-  <p style="color:#a8bdd2;margin-bottom:15px">Есть вопросы? Звони!</p>
-  <a href="tel:89380235066">8 938 023 50 66</a>
-  <p style="margin-top:15px;color:#6c9ec6">PLAY STATION SULIM</p>
- </div>
-</section>
-</main>
+    <section class="section-wrap info-grid">
+      <div class="info-card reveal"><div class="section-kicker">05 — HOW IT WORKS</div><h2>ВСЁ <span>ПРОСТО</span></h2><ol><li><b>Выбери комплект</b><small>PS5 или PS5 вместе с телевизором</small></li><li><b>Оставь заявку</b><small>Укажи даты и номер телефона</small></li><li><b>Дождись подтверждения</b><small>Согласуем наличие и способ получения</small></li><li><b>Играй и наслаждайся</b><small>Оплата при получении или переводом</small></li></ol></div>
+      <div class="info-card review-card reveal"><div class="section-kicker">06 — REVIEWS</div><h2>ОТЗЫВЫ <span>КЛИЕНТОВ</span></h2><div class="review-empty">✦</div><h3>ОТЗЫВЫ СКОРО ПОЯВЯТСЯ</h3><p>Здесь будут настоящие впечатления наших клиентов.</p></div>
+    </section>
+  </main>
 
-<footer>© 2026 PLAY STATION SULIM · ВСЕ ПРАВА ЗАЩИЩЕНЫ</footer>
-
-<script>
-const pack=document.getElementById('pack');
-const days=document.getElementById('days');
-const delivery=document.getElementById('delivery');
-const total=document.getElementById('total');
-const details=document.getElementById('details');
-const start=document.getElementById('start');
-
-function calculate(){
- const rate=Number(pack.value);
- const count=Number(days.value);
- const regular=rate*count;
- const discount=count>=3 && regular>=1800 ? rate : 0;
- const sum=regular-discount+Number(delivery.value);
- total.textContent=sum.toLocaleString('ru-RU')+' ₽';
- details.textContent='Аренда: '+(regular-discount).toLocaleString('ru-RU')+' ₽ · Скидка: '+discount+' ₽ · Доставка: '+delivery.value+' ₽';
-}
-[pack,days,delivery].forEach(el=>el.addEventListener('change',calculate));
-
-start.min=new Date().toISOString().split('T')[0];
-calculate();
-
-function bookingDemo(){
- if(!start.value){alert('Сначала выбери дату начала аренды.');return;}
- alert('Спасибо! Это пока демонстрация. Настоящая отправка заявки и проверка свободных дат будут подключены на следующем этапе.');
-}
-</script>
+  <footer class="footer"><div class="section-wrap footer-inner"><a class="brand" href="#top"><span class="brand-mark">P<span>S</span></span><span class="brand-name">PLAY STATION <b>SULIM</b></span></a><p>Аренда PlayStation 5</p><a href="tel:89380235066">8 938 023-50-66</a><small>© <span id="year"></span> PLAY STATION SULIM</small></div></footer>
+  <script src="script.js"></script>
 </body>
 </html>
