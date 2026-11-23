@@ -68,7 +68,96 @@
         <article class="game-card game-soon reveal"><div class="game-number">10</div><div class="game-art"><span>GTA</span><b>VI</b><small>COMING SOON</small></div><h3>GTA VI</h3><p>Скоро в коллекции</p><label>СКОРО</label></article>
       </div>
     </section>
+<section class="game-universe">
+  <div class="game-collage">
+    <div class="collage-glow"></div>
+    <span class="collage-label">PLAY STATION SULIM</span>
+    <h2>ТВОЯ ИГРОВАЯ ВСЕЛЕННАЯ</h2>
 
+    <div class="collage-games">
+      <span>GTA V</span>
+      <span>FC 25</span>
+      <span>FC 26</span>
+      <span>UFC 4</span>
+      <span>UFC 5</span>
+      <span>MORTAL KOMBAT</span>
+      <span>RED DEAD REDEMPTION 2</span>
+      <span class="coming">GTA VI · СКОРО</span>
+      <span class="coming">UFC 6 · СКОРО</span>
+    </div>
+
+    <div class="collage-footer">ИГРАЙ. ПОБЕЖДАЙ. ОТДЫХАЙ.</div>
+  </div>
+</section>
+
+<style>
+.game-universe {
+  padding: 35px 16px;
+  background: #030817;
+}
+
+.game-collage {
+  position: relative;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 20px;
+  text-align: center;
+  border: 1px solid #087cff;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 50% 50%, #073d85, transparent 65%),
+    linear-gradient(135deg, #020817, #061b3d, #020817);
+  box-shadow: 0 0 35px #006eff55;
+}
+
+.collage-label {
+  color: #65b5ff;
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+
+.game-collage h2 {
+  color: white;
+  font-size: clamp(25px, 5vw, 48px);
+  text-shadow: 0 0 20px #168aff;
+}
+
+.collage-games {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 35px 0;
+}
+
+.collage-games span {
+  padding: 16px 20px;
+  color: white;
+  font-weight: 900;
+  border: 1px solid #168aff;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #102e59, #050d20);
+  box-shadow: 0 0 15px #087cff55;
+  transition: .25s;
+}
+
+.collage-games span:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #168aff;
+}
+
+.collage-games .coming {
+  color: #65b5ff;
+  border-color: #65b5ff;
+}
+
+.collage-footer {
+  color: #7dbdff;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+</style>
     <section class="price-section" id="prices"><div class="section-wrap">
       <div class="section-head reveal"><div><div class="section-kicker">03 — SIMPLE PRICING</div><h2>ПОНЯТНЫЕ <span>ЦЕНЫ</span></h2></div><p>Без залога. Доставка отдельно.</p></div>
       <div class="price-grid">
