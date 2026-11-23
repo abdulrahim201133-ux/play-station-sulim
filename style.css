@@ -25,3 +25,46 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
+/* NEON PLAYSTATION ATMOSPHERE */
+body {
+  background:
+    radial-gradient(ellipse at 15% 20%, #10105b99, transparent 45%),
+    radial-gradient(ellipse at 85% 35%, #003e9999, transparent 45%),
+    radial-gradient(ellipse at 50% 90%, #25004d88, transparent 50%),
+    linear-gradient(135deg, #01020b, #050b20, #01020b) !important;
+  background-attachment: fixed !important;
+}
+
+body::before {
+  content: "△     ○     ×     □";
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(45px, 9vw, 110px);
+  letter-spacing: 25px;
+  color: #168aff55;
+  text-shadow:
+    0 0 12px #087cff,
+    0 0 35px #5b20ff;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 10% 50%, #005eff22, transparent 35%),
+    radial-gradient(ellipse at 90% 70%, #8b00ff22, transparent 35%);
+  animation: neonGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+  from { opacity: .45; }
+  to { opacity: 1; }
+}
