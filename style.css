@@ -120,3 +120,35 @@ img,
   border-radius: 24px !important;
   overflow: hidden;
 }
+/* ЕДИНОЕ СКРУГЛЕНИЕ ВСЕГО САЙТА */
+
+/* Все кнопки */
+button,
+.btn,
+a.btn,
+a.button {
+  border-radius: 999px !important;
+}
+
+/* Все фотографии */
+img,
+.hero,
+.hero-photo,
+.memes img {
+  border-radius: 28px !important;
+}
+
+/* Карточки */
+.game-card,
+.price-card,
+.booking-card {
+  border-radius: 28px !important;
+  overflow: hidden !important;
+}
+
+/* Картинки внутри карточек */
+.game-card img,
+.price-card img,
+.booking-card img {
+  border-radius: 22px !important;
+}
