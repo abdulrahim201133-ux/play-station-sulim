@@ -153,11 +153,11 @@ img,
   border-radius: 22px !important;
 }
 /* НЕОНОВАЯ ПОДСВЕТКА КНОПОК */
-
 button,
 .btn,
 a.btn,
 a.button {
+
   background: linear-gradient(135deg, #006eff, #0037ff) !important;
   color: #fff !important;
   border: 1px solid #45aaff !important;
