@@ -86,3 +86,14 @@ body::after {
   position: relative;
   z-index: 2;
 }
+.hero-art,
+.console,
+.console-glow,
+.console-wing,
+.console-core,
+.console-light,
+.controller,
+.art-orbit,
+.art-caption {
+  display: none !important;
+}
