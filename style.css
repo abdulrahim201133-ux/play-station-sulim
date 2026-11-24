@@ -65,3 +65,24 @@ body::after {
   position: relative;
   z-index: 2;
 }
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(to right, #020817 0%, rgba(2,8,23,.45) 45%, transparent 100%),
+    linear-gradient(to bottom, transparent 55%, #020817 100%),
+    url("assets/gaming-room.jpg") center / cover no-repeat;
+  pointer-events: none;
+}
+
+.hero-copy,
+.hero-bottom {
+  position: relative;
+  z-index: 2;
+}
