@@ -7,7 +7,7 @@ startEl.min = localISO;
 $("year").textContent = new Date().getFullYear();
 
 function calculate(){
-  const days = Math.max(1, Math.min(30, Number(daysEl.value)||1));
+  const days = Math.min(30, Math.max(1, Number(daysEl.value) || 0));
   daysEl.value = days;
   const rate = packageEl.value === "ps5_tv" ? 1000 : 700;
   const regular = rate * days;
