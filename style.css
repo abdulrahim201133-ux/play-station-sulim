@@ -47,15 +47,15 @@ body::after {
   background:
     linear-gradient(to bottom, transparent 55%, #020817 100%),
     linear-gradient(to right, #020817 0%, transparent 25%, transparent 75%, #020817 100%),
-    url("assets/gaming-room.jpg") center/cover no-repeat !important;
+    url("assets/playstation.jpg.jpg") center/cover no-repeat !important;
   min-height: 600px;
   overflow: hidden;
 }
 .hero {
   background-image:
     linear-gradient(to bottom, transparent 55%, #020817 100%),
-    linear-gradient(to right, #020817 0%, transparent 30%, transparent 75%, #020817 100%),
-    url("assets/gaming-room.jpg.PNG") !important;
+    linear-gradient(to right, #020817 0%, transparent 30%, transparent 75%, 
+  #url("assets/playstation.jpg.jpg") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -76,8 +76,8 @@ body::after {
   z-index: 0;
   background:
     linear-gradient(to right, #020817 0%, rgba(2,8,23,.45) 45%, transparent 100%),
-    linear-gradient(to bottom, transparent 55%, #020817 100%),
-    url("assets/gaming-room.jpg.PNG"); center / cover no-repeat;
+    linear-gradient(to bottom, transparent 55%, #020817 
+  url("assets/playstation.jpg.jpg")  ; center / cover no-repeat;
   pointer-events: none;
 }
 
