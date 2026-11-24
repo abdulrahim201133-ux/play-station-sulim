@@ -97,15 +97,18 @@ body::after {
 .art-caption {
   display: none !important;
 }
-/* ЕДИНЫЙ СТИЛЬ С ЗАКРУГЛЁННЫМИ УГЛАМИ */
+/* СКРУГЛЁННЫЕ КНОПКИ И КАРТИНКИ */
 
 button,
 .btn,
-a.btn,
+a.btn {
+  border-radius: 50px !important;
+}
+
 input,
 select,
 textarea {
-  border-radius: 18px !important;
+  border-radius: 16px !important;
 }
 
 img,
@@ -113,19 +116,7 @@ img,
 .game-card,
 .price-card,
 .booking-card,
-.memеs img {
+.memes {
   border-radius: 24px !important;
   overflow: hidden;
-}
-
-.game-card,
-.price-card,
-.booking-card,
-section {
-  border-radius: 24px;
-}
-
-button,
-.btn {
-  border-radius: 50px !important;
 }
