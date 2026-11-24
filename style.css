@@ -97,3 +97,35 @@ body::after {
 .art-caption {
   display: none !important;
 }
+/* ЕДИНЫЙ СТИЛЬ С ЗАКРУГЛЁННЫМИ УГЛАМИ */
+
+button,
+.btn,
+a.btn,
+input,
+select,
+textarea {
+  border-radius: 18px !important;
+}
+
+img,
+.hero-photo,
+.game-card,
+.price-card,
+.booking-card,
+.memеs img {
+  border-radius: 24px !important;
+  overflow: hidden;
+}
+
+.game-card,
+.price-card,
+.booking-card,
+section {
+  border-radius: 24px;
+}
+
+button,
+.btn {
+  border-radius: 50px !important;
+}
