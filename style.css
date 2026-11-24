@@ -55,7 +55,7 @@ body::after {
   background-image:
     linear-gradient(to bottom, transparent 55%, #020817 100%),
     linear-gradient(to right, #020817 0%, transparent 30%, transparent 75%, #020817 100%),
-    url("assets/gaming-room.jpg") !important;
+    url("assets/gaming-room.jpg.PNG") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
